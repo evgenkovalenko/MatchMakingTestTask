@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MatchMaking.Common.App\MatchMaking.Common.App.csproj" />
+    <ProjectReference Include="..\MatchMaking.Common.Kafka\MatchMaking.Common.Kafka.csproj" />
+    <ProjectReference Include="..\MatchMaking.Common.Redis\MatchMaking.Common.Redis.csproj" />
+    <ProjectReference Include="..\MatchMaking.Common.Types\MatchMaking.Common.Types.csproj" />
+    <ProjectReference Include="..\MatchMaking.Shared.DataContracts\MatchMaking.Shared.DataContracts.csproj" />
+  </ItemGroup>
+
+</Project>
